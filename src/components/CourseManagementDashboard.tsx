@@ -1,15 +1,75 @@
 'use client';
 
 import { useState } from 'react';
-import { CourseCreationData } from '@/types/CourseCreation';
-
-interface ManagedCourse extends CourseCreationData {
+interface ManagedCourse {
   id: string;
   createdAt: string;
   updatedAt: string;
   status: 'draft' | 'published' | 'archived';
   enrollments: number;
   revenue: number;
+  basicInfo: {
+    title: string;
+    subtitle: string;
+    description: string;
+    category: string;
+    level: string;
+    duration: number;
+    language: string;
+    thumbnail: string;
+    tags: string[];
+  };
+  instructor: {
+    name: string;
+    bio: string;
+    avatar: string;
+    credentials: string[];
+    socialLinks: {
+      linkedin: string;
+      twitter: string;
+      website: string;
+    };
+  };
+  content: {
+    modules: Array<{
+      id: string;
+      title: string;
+      description: string;
+      lessons: any[];
+      duration: number;
+    }>;
+  };
+  assessments: {
+    quizzes: any[];
+    projects: any[];
+    certificates: {
+      enabled: boolean;
+      requirements: {
+        minScore: number;
+        completedLessons: number;
+      };
+    };
+  };
+  pricing: {
+    type: string;
+    price: number;
+    currency: string;
+    discounts: any[];
+  };
+  settings: {
+    visibility: string;
+    enrollment: {
+      maxStudents: number;
+      autoApproval: boolean;
+      prerequisites: any[];
+    };
+    features: {
+      downloadableResources: boolean;
+      discussionForum: boolean;
+      liveQA: boolean;
+      mobileAccess: boolean;
+    };
+  };
 }
 
 // Mock data - En producción vendría de una base de datos
