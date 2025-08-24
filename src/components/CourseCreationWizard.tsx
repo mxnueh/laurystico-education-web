@@ -41,6 +41,7 @@ const initialCourseData: Partial<CourseCreationData> = {
       requiredQuizzes: [],
       requiredAssignments: [],
     },
+    prerequisites: [],
   },
   status: 'draft',
   imageGallery: [],
