@@ -23,6 +23,7 @@ export default function SettingsStep({ data, onUpdate, onNext, onPrev }: Props) 
         requiredQuizzes: [],
         requiredAssignments: [],
       },
+      prerequisites: [],
     },
   });
 
