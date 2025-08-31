@@ -20,7 +20,7 @@ export default function FloatingActionButtons() {
 
       {/* WhatsApp Button */}
       <a
-        href="https://wa.me/18496391204?text=Hola%20Laurystico%2C%20quiero%20más%20información%20sobre%20los%20cursos"
+        href="https://wa.me/5218496391204?text=Hola%20Laurystico%2C%20quiero%20más%20información%20sobre%20los%20cursos"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="WhatsApp 849 639 1204"

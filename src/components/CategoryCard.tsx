@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 type Props = {
   title: string;
   description: string;
@@ -17,10 +19,12 @@ export default function CategoryCard({ title, description, href, color = 'violet
     <a href={href} className="block group rounded-card border bg-white overflow-hidden">
       <div className={`aspect-video rounded-t-[inherit] bg-gradient-to-br ${colorMap[color]} to-transparent relative overflow-hidden`}>
         {image && (
-          <img 
+          <Image 
             src={image} 
             alt={title}
-            className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="absolute inset-0 object-cover group-hover:scale-105 transition-transform duration-300"
           />
         )}
       </div>

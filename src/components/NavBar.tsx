@@ -4,8 +4,16 @@ import Image from 'next/image';
 
 export default function NavBar() {
   async function logout() {
-    await fetch('/api/logout', { method: 'POST' });
-    window.location.href = '/login';
+    try {
+      const response = await fetch('/api/logout', { method: 'POST' });
+      if (response.ok) {
+        window.location.href = '/login';
+      } else {
+        console.error('Error al cerrar sesión');
+      }
+    } catch (error) {
+      console.error('Error al cerrar sesión:', error);
+    }
   }
   return (
     <header className="border-b bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/50 sticky top-0 z-50">
