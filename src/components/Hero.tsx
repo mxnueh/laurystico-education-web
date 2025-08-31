@@ -92,7 +92,7 @@ export default function Hero() {
               {/* Hero Image */}
               <div className="h-full relative">
                 <Image 
-                  src="/fotos/Escena Tecnológica Isométrica2.jpg" 
+                  src="/fotos/escena-tecnologica-isometrica2.jpg" 
                   alt="Escena tecnológica isométrica con robótica y programación"
                   fill
                   className="object-cover"
