@@ -35,7 +35,7 @@ export default function HomePage() {
             description="Crea juegos 3D profesionales con Lua. Aprende scripting, diseño de niveles y monetización de experiencias."
             href="/courses?cat=roblox"
             color="cyan"
-            image="/fotos/hero roblox.JPG"
+            image="/fotos/hero-roblox.jpg"
           />
         </div>
       </section>
